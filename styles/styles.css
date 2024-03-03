@@ -1,3 +1,4 @@
+/*GENERAL*/
 * {
   font-family: "Honk", sans-serif;
 }
@@ -11,8 +12,10 @@ body {
   margin-bottom: 10vh;
   text-align: center;
   background-color: #a73169;
+  display: flex;
+  flex-direction: column;
 }
-
+/*FOR MAIN PLAY AREA*/
 .main-body {
   font-family: "Honk", sans-serif;
   background-color: #d9626b;
@@ -23,8 +26,29 @@ body {
 
   border: 7px solid #6aaf9d;
   border-radius: 24px;
+  overflow: hidden;
 }
 
+.score-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 5vw;
+}
+
+.player-score,
+.computer-score {
+  font-size: 3em;
+}
+
+.curr-player-score,
+.curr-comp-score {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/*FOR WIN OR LOSE DECLARATION*/
 .win-lose-msg {
   font-size: 65px;
   margin: 0 0 10px 0;
