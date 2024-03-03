@@ -1,0 +1,12 @@
+.rock:hover,
+.paper:hover,
+.scissors:hover {
+  cursor: pointer;
+  font-size: 2.3em;
+}
+
+.rock:active,
+.paper:active,
+.scissors:active {
+  font-size: 2em;
+}
