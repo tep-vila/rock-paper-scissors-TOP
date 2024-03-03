@@ -1,0 +1,52 @@
+* {
+  font-family: "Honk", sans-serif;
+}
+html {
+  min-height: 100vh;
+  position: relative;
+}
+body {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10vh;
+  text-align: center;
+  background-color: #a73169;
+}
+
+.main-body {
+  font-family: "Honk", sans-serif;
+  background-color: #d9626b;
+
+  margin: 0 auto;
+  width: 70vw;
+  height: 75vh;
+
+  border: 7px solid #6aaf9d;
+  border-radius: 24px;
+}
+
+.win-lose-msg {
+  font-size: 65px;
+  margin: 0 0 10px 0;
+}
+
+/* FOOTER */
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc27a;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 7vh;
+}
+
+footer p {
+  font-family: "anton", sans-serif;
+  font-size: 24px;
+  color: #355d68;
+}
