@@ -64,19 +64,35 @@ function tie(computerSelection) {
   setTimeout(() => (choiceDisplay.innerHTML = resetChoice), 2000);
 }
 
-function updateCompImg(compChoice) {
-  compChoiceDisplay.src = `assets/${compChoice}.png`;
-  console.log(compChoiceDisplay);
-}
-
 function lose(computerSelection) {
   choiceDisplay.innerHTML = "Round lost!";
   updateCompImg(computerSelection);
   setTimeout(() => (choiceDisplay.innerHTML = resetChoice), 2000);
+  scorer("lose");
 }
 
 function win(computerSelection) {
   choiceDisplay.innerHTML = "Round won!";
   updateCompImg(computerSelection);
   setTimeout(() => (choiceDisplay.innerHTML = resetChoice), 2000);
+  scorer("won");
+}
+
+function updateCompImg(compChoice) {
+  compChoiceDisplay.src = `assets/${compChoice}.png`;
+  console.log(compChoiceDisplay);
+}
+
+function scorer(result) {
+  let playerWon = result === "won" ? true : false;
+  switch (playerWon) {
+    case true:
+      playerScore.textContent = parseInt(playerScore.textContent) + 1;
+      console.log(playerScore);
+      break;
+
+    case false:
+      compScore.textContent = parseInt(compScore.textContent) + 1;
+      console.log(playerScore);
+  }
 }
