@@ -56,6 +56,7 @@ function playRound(computerSelection, playerSelection) {
     console.log("You win");
     win(computerSelection);
   }
+  scoreChecker();
 }
 
 function tie(computerSelection) {
@@ -95,4 +96,22 @@ function scorer(result) {
       compScore.textContent = parseInt(compScore.textContent) + 1;
       console.log(playerScore);
   }
+}
+
+function scoreChecker() {
+  if (parseInt(compScore.textContent) >= 5) {
+    winLoseMsg.textContent = "YOU LOST :(";
+    setTimeout(gameReset, 4000);
+  } else if (parseInt(playerScore.textContent) >= 5) {
+    winLoseMsg.textContent = "YOU WON!";
+    setTimeout(gameReset, 4000);
+  }
+}
+
+function gameReset() {
+  playerScore.textContent = 0;
+  compScore.textContent = 0;
+  compChoiceDisplay.src = "assets/question-mark.png";
+  choiceDisplay.innerHTML = resetChoice;
+  winLoseMsg.textContent = "Rock, Paper, Scissors!";
 }
